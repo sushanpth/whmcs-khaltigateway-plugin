@@ -87,7 +87,8 @@ function khaltigateway_invoicepage_code($gateway_params)
                 "amount" => $npr_amount_in_paisa
             ),
         ),
-        "product_details" => $cart
+        // sending product_details throws error if any product have negative pricing (for example discounts)
+        // "product_details" => $cart
     );
 
     return khaltigateway_pidx_page($gateway_params, $npr_amount, $checkout_args);
