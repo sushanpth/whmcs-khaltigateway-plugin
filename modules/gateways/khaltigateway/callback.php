@@ -94,3 +94,10 @@ $khaltigateway_whmcs_submit_data = array(
 
 // Submit the data to whmcs
 khaltigateway_acknowledge_whmcs_for_payment($khaltigateway_whmcs_submit_data);
+
+// fix redirection issue
+// Set Redirect URL's
+$successUrl = $gatewayParams['systemurl'].'/viewinvoice.php?id='.$invoice_id.'&paymentsuccess=true';
+$failedUrl = $gatewayParams['systemurl'].'/viewinvoice.php?id='.$invoice_id.'&paymentfailed=true';
+header('location: '.$successUrl);
+die();
