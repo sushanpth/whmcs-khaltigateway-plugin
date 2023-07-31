@@ -87,6 +87,7 @@ $khaltigateway_whmcs_submit_data = array(
     'wh_invoiceId' => $wh_invoiceId,
     'wh_gatewayModule' => $wh_gatewayModule,
     'wh_transactionId' => $wh_transactionId,
+    'khalti_transaction_id' => $wh_transactionId,
     'wh_paymentAmount' => $wh_amount_in_base_currency,
     'wh_paymentFee' => $wh_paymentFee,
     'wh_paymentSuccess' => $wh_paymentSuccess
